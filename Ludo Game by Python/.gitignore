@@ -1,0 +1,19 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Byte-compiled / cache files
+*.py[cod]
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo           .idea/
+__pycache__/
+*.pyc
+
