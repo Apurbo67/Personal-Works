@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Project 2 - Create Account</title>
+<style>
+  :root{
+    --fg:#1f2937; --muted:#6b7280; --ok:#0a7a0a; --err:#b00020; --brand:#0b5ed7;
+    --border:#e5e7eb; --bg:#ffffff; --bg-sub:#f8fafc;
+  }
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:var(--bg-sub);color:var(--fg)}
+  .nav{background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;display:flex;gap:16px;align-items:center}
+  .nav a{color:var(--fg);text-decoration:none;padding:6px 10px;border-radius:8px}
+  .nav a.active{background:var(--bg-sub);font-weight:600}
+  .wrap{max-width:760px;margin:28px auto;padding:0 20px}
+  h2{margin:8px 0 18px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px}
+  label{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+  input{width:100%;max-width:420px;padding:10px 12px;margin-top:4px;border:1px solid var(--border);border-radius:10px;background:#fff}
+  input:focus{outline:2px solid rgba(11,94,215,.15);border-color:var(--brand)}
+  .row{margin-top:14px}
+  button{appearance:none;border:1px solid var(--brand);background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
+  button:hover{filter:brightness(0.98)}
+  .hint{color:var(--muted);margin-top:10px}
+  .ok{color:var(--ok)} .err{color:var(--err)}
+  a.link{color:var(--brand);text-decoration:none}
+  a.link:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <strong>ShopOnline</strong>
+  <a href="login.htm">Login</a>
+  <a class="active" href="register.htm">Register</a>
+</nav>
+
+<div class="wrap">
+  <div class="card">
+    <h2>Create Account</h2>
+
+    <label for="fname">First name</label>
+    <input id="fname" type="text" placeholder="Enter your first name" />
+
+    <label for="lname">Surname</label>
+    <input id="lname" type="text" placeholder="Enter your surname" />
+
+    <label for="email">Email</label>
+    <input id="email" type="text" placeholder="you@example.com" />
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="at least 6 chars" />
+
+    <label for="repass">Re-type password</label>
+    <input id="repass" type="password" placeholder="re-type your password" />
+
+    <div class="row">
+      <button id="btnReg">Register</button>
+    </div>
+
+    <p id="msg" class="row"></p>
+
+    <p class="hint">Already have an account?
+      <a class="link" href="login.htm">Click here to log in</a>.
+    </p>
+  </div>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>

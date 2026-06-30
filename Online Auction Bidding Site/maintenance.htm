@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ShopOnline  Maintenance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{--fg:#1f2937;--muted:#6b7280;--brand:#0b5ed7;--border:#e5e7eb;--panel:#f9fafb;--white:#fff}
+  *{box-sizing:border-box}
+  body{font-family:Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f3f4f6;color:var(--fg)}
+  .header{background:var(--white);border-bottom:1px solid var(--border);padding:10px 20px;text-align:center}
+  .title{font-weight:700;font-size:22px;margin:6px 0}
+  .nav{display:flex;gap:10px;justify-content:center;margin:8px 0}
+  .btn{appearance:none;border:1px solid var(--border);background:var(--white);padding:8px 14px;border-radius:8px;cursor:pointer}
+  .btn:hover{background:#f5f5f5}
+  .btn.active{box-shadow:0 0 0 2px #e0e7ff inset;background:#eef2ff}
+  .wrap{max-width:980px;margin:22px auto;padding:0 18px}
+  .panel{border:1px solid var(--border);background:var(--white);border-radius:10px;overflow:hidden}
+  .panelTitle{background:var(--panel);border-bottom:1px solid var(--border);padding:10px 14px;text-align:center;color:var(--muted)}
+  .panelBody{padding:16px 18px 22px}
+  .actions{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+  .primary{border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:8px;padding:8px 14px}
+  .small{color:var(--muted);font-size:13px}
+  #msg{margin:8px 0;font-weight:600}
+  #msg.ok{color:#0a7a0a} #msg.err{color:#b00020}
+  table{border-collapse:collapse;width:100%;margin-top:8px}
+  th,td{border:1px solid var(--border);padding:8px 10px;text-align:left}
+  th{background:#f9fafb}
+  tfoot td{font-weight:700}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="title">ShopOnline</div>
+  <div class="nav">
+    <button class="btn" onclick="location.href='home.htm'">Home</button>
+    <button class="btn" onclick="location.href='listing.htm'">Listing</button>
+    <button class="btn" onclick="location.href='bidding.php'">Bidding</button>
+    <button class="btn active" onclick="location.href='maintenance.htm'">Maintenance</button>
+    <button class="btn" onclick="location.href='logout.php'">Log Out</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="panel">
+    <div class="panelTitle">Maintenance</div>
+    <div class="panelBody">
+      <p class="small">Close expired auctions, and generate a report of SOLD/FAILED items with revenue.</p>
+
+      <div class="actions">
+        <button id="btnProcess" class="primary">Process Auction Items</button>
+        <button id="btnReport" class="btn">Generate Report</button>
+        <label class="small" style="margin-left:auto">
+          <input type="checkbox" id="removeAfter" />
+          Remove SOLD/FAILED items after report
+        </label>
+      </div>
+
+      <div id="msg"></div>
+      <div id="out"></div>
+    </div>
+  </div>
+</div>
+
+<script src="maintenance.js?v=20251027"></script>
+</body>
+</html>

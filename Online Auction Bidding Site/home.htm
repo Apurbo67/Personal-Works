@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ShopOnline Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{--fg:#1f2937;--muted:#6b7280;--brand:#0b5ed7;--border:#e5e7eb;--panel:#f8fafc;--white:#fff;}
+  *{box-sizing:border-box}
+  body{font-family:Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f3f4f6;color:var(--fg)}
+  .header{background:var(--white);border-bottom:1px solid var(--border);padding:10px 20px;text-align:center}
+  .title{font-weight:700;font-size:22px;margin:6px 0}
+  .nav{display:flex;gap:10px;justify-content:center;margin:8px 0 4px}
+  .btn{appearance:none;border:1px solid var(--border);background:var(--white);padding:8px 14px;border-radius:8px;cursor:pointer}
+  .btn:hover{background:#f5f5f5}
+  .wrap{max-width:980px;margin:24px auto;padding:0 18px}
+  .panel{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:22px}
+  h1{margin:0 0 10px}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="title">ShopOnline</div>
+  <div class="nav">
+    <button class="btn" onclick="location.href='home.htm'">Home</button>
+    <button class="btn" onclick="location.href='listing.htm'">Listing</button>
+    <button class="btn" onclick="location.href='bidding.php'">Bidding</button>
+    <button class="btn" onclick="location.href='maintenance.htm'">Maintenance</button>
+    <button class="btn" onclick="location.href='logout.php'">Log Out</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="panel">
+    <h1>Welcome to ShopOnline</h1>
+    <p>Use the navigation to list an item, place bids, or maintain records.</p>
+  </div>
+</div>
+</body>
+</html>
