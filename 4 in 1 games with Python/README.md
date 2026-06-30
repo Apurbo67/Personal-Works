@@ -1,4 +1,4 @@
-# TIP_C04_Team2 Games Collection
+# 4 in 1 Games Collection
 To start the games collection run the file `run.py`. Refer to the documentation PDF for detailed instructions.
 
 ## Dependencies
