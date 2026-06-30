@@ -1,0 +1,24 @@
+(customer)
+CREATE TABLE customer (
+  email VARCHAR(255) PRIMARY KEY,
+  cust_name VARCHAR(100) NOT NULL,
+  passwd VARCHAR(255) NOT NULL,
+  phone  VARCHAR(40)  NOT NULL
+);
+
+(booking)
+CREATE TABLE booking (
+  booking_ref VARCHAR(20) PRIMARY KEY,
+  email       VARCHAR(255) NOT NULL,
+  passenger_name  VARCHAR(100) NOT NULL,
+  passenger_phone VARCHAR(40)  NOT NULL,
+  unit_no     VARCHAR(10) NULL,
+  street_no   VARCHAR(10) NOT NULL,
+  street_name VARCHAR(100) NOT NULL,
+  suburb      VARCHAR(100) NOT NULL,
+  dest_suburb VARCHAR(100) NOT NULL,
+  pickup_datetime  DATETIME NOT NULL,
+  booking_datetime DATETIME NOT NULL,
+  status      ENUM('unassigned','assigned') NOT NULL DEFAULT 'unassigned',
+  CONSTRAINT fk_booking_customer FOREIGN KEY (email) REFERENCES customer(email)
+);
